@@ -1,0 +1,58 @@
+﻿@using Otomation.Models.Sınıflar
+@model List<Urun>
+@{
+    ViewBag.Title = "DepartmanDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3> Kategori Urunleri</h3>
+
+<div style="background-color: lightblue; padding: 10px; border-radius: 10px; font-size: 18px; font-weight: 500;">@ViewBag.d</div>
+<br />
+
+<table class="table table-hover">
+    <tr>
+        <th>ID</th>
+
+        <th>UrunAdı</th>
+        <th>Marka</th>
+        <th>Stok</th>
+        <th>AlisFiyat</th>
+
+        <th>SatisFiyat</th>
+        <th>Durum</th>
+        <th>Urungorsel</th>
+    </tr>
+    <tr>
+        @foreach (var k in Model)
+        {
+        <tr>
+            <td>
+                @k.Urunid
+            </td>
+            <td>
+                @k.UrunAd
+            </td>
+            <td>
+                @k.Marka
+            </td>
+            <td>
+                @k.Stok
+            </td>
+            <td>
+                @k.AlisFiyat
+            </td>
+            <td>
+                @k.SatisFiyat
+            </td>
+            <td>
+                @k.Durum
+            </td>
+            <td>
+                @k.UrunGorsel
+            </td>
+           
+        </tr>
+    }
+    </table>
+
